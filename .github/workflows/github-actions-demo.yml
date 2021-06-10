@@ -27,13 +27,13 @@ jobs:
       - run: echo CI DONE
 
       # 1. AWS 계정 세팅하기.
-    - name: AWS Setting
-      uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-northeast-2
+      - name: AWS Setting
+        uses: aws-actions/configure-aws-credentials@v1
+          with:
+            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            aws-region: ap-northeast-2
 
-    # 2. AWS S3 버킷에 업로드하기.
-    - name: Upload to S3 Bucket
-      run: aws deploy push --application-name cicd0609 --description "practice cicd" --s3-location s3://practice-cicd/server/build.zip --source .
+      # 2. AWS S3 버킷에 업로드하기.
+      - name: Upload to S3 Bucket
+        run: aws deploy push --application-name cicd0609 --description "practice cicd" --s3-location s3://practice-cicd/server/build.zip --source .
