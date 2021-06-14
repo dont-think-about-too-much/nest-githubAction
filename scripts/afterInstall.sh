@@ -1,3 +1,4 @@
 echo "hello world"
 
-node build/dist/main.js
+cd /home/ubuntu/build/
+node dist/main.js
