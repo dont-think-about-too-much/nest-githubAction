@@ -35,4 +35,4 @@ jobs:
 
       # 2. AWS S3 버킷에 업로드하기.
       - name: Upload to S3 Bucket
-        run: aws deploy push --application-name cicd0609 --description "practice cicd" --s3-location s3://practice-cicd/server/build.zip --source .
+        run: aws deploy push --application-name code-deploy --description "practice cicd" --s3-location s3://practice-cicd/server/build.zip --source .
