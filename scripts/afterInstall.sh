@@ -11,7 +11,7 @@ CURRENT_PID=$(sudo lsof -t -i:3000)
 
 echo "현재 아이디"
 
-# sudo kill -9 $CURRENT_PID
+sudo kill -9 $CURRENT_PID
 
 echo "죽임"
 
