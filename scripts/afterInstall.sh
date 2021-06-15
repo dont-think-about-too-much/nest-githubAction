@@ -9,7 +9,11 @@ echo "이동함"
 
 CURRENT_PID=$(sudo lsof -t -i:3000)
 
+echo "현재 아이디"
+
 # sudo kill -9 $CURRENT_PID
+
+echo "죽임"
 
 echo "기존에 있던 3000포트 삭제"
 
