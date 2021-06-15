@@ -11,6 +11,7 @@ files:
 hooks:
   AfterInstall:
       - location: scripts/afterInstall.sh
+        timeout: 300
         runas: root
 
 # 로컬의 파일을 받아오기 전에(BeforeInstall) 실행할 스크립트를 지정합니다.
